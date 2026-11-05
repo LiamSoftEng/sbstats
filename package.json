@@ -1,0 +1,44 @@
+{
+  "name": "skyblock-viewer",
+  "version": "1.0.0",
+  "description": "Hypixel SkyBlock player data viewer",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --configLoader runner && electron-builder",
+    "electron": "electron .",
+    "electron:dev": "concurrently -k \"vite --configLoader runner\" \"node scripts/electron-dev.js\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "concurrently": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "electron": "^45.2.2",
+    "electron-builder": "^26.18.0",
+    "vite": "^6.0.0"
+  },
+  "build": {
+    "appId": "com.skyblock.viewer",
+    "productName": "SkyBlock Viewer",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

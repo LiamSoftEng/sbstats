@@ -1,0 +1,147 @@
+.explorer { color: var(--text); }
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 18px;
+  color: var(--text-3);
+  font-size: 12px;
+}
+.crumb {
+  border: 0;
+  padding: 2px 0;
+  background: none;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.crumb:hover { color: var(--accent); }
+.crumbSeparator { color: var(--text-3); }
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.sectionHeading h3 {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.sectionHeading span {
+  display: block;
+  color: var(--text-3);
+  font-size: 11px;
+  margin-top: 2px;
+}
+.rawToggle {
+  flex-shrink: 0;
+  border: 1px solid var(--border-md);
+  border-radius: 6px;
+  padding: 6px 9px;
+  background: var(--bg-3);
+  color: var(--text-2);
+  font-size: 11px;
+}
+.rawToggle:hover { color: var(--text); border-color: var(--accent); }
+
+.branchMenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 8px;
+}
+.branchButton {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  background: var(--bg-2);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.branchButton:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+.branchText { min-width: 0; flex: 1; }
+.branchName {
+  display: block;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.branchKey {
+  display: block;
+  overflow: hidden;
+  color: var(--text-3);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.branchSummary {
+  max-width: 110px;
+  overflow: hidden;
+  color: var(--text-2);
+  font-size: 10px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.branchArrow { color: var(--accent); font-size: 20px; line-height: 1; }
+.empty { color: var(--text-2); font-size: 13px; padding: 12px 0; }
+
+.rawPanel {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  overflow: auto;
+}
+.valuePanel .rawPanel { margin-top: 0; }
+.nodeChildren {
+  margin: 2px 0 2px 5px;
+  padding-left: 14px;
+  border-left: 1px solid var(--border);
+}
+.nodeEntry { min-height: 19px; overflow-wrap: anywhere; }
+.nodeToggle {
+  width: 16px;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--text-3);
+  cursor: pointer;
+}
+.nodeToggle:hover { color: var(--text); }
+.nodePreview {
+  margin: 0 5px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  background: var(--bg-3);
+  color: var(--text-2);
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+.nodePreview:hover { color: var(--text); }
+.key { color: #c792ea; }
+.colon, .punctuation { color: var(--text-3); }
+.stringValue { color: #c3e88d; }
+.num { color: #f78c6c; }
+.bool { color: #82aaff; }
+.null, .undefined { color: var(--text-3); font-style: italic; }
+.more { color: var(--text-3); font-size: 11px; font-style: italic; }
